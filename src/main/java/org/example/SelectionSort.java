@@ -27,6 +27,11 @@ public class SelectionSort {
         for (int i = 0; i < n-1; i++){
             int min_idx = i;
 
+            if (i % (n / 100) == 0) {
+                int porcentaje = (i * 100) / (n-1);
+                System.out.println("Progreso: " + porcentaje + "%");
+            }
+
             for (int j = i+1; j < n; j++){
                 if ( lista.get(j) < lista.get(min_idx)){
                     min_idx = j;
